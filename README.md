@@ -21,6 +21,7 @@ Check out these examples to learn how to use morseplay:
 
 ```python
 >>> import morseplay
+>>> import RPi.GPIO as GPIO
 # Let's try sending morse signals from an LED
 >>> LED = morseplay.OutputMorse(outpin=17, setmode=GPIO.BCM, delay_unit=0.3)
 # This will signal "hello" in morse from LED attached to pin 17
