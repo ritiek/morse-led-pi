@@ -25,8 +25,7 @@ class OutputMorse:
         for code in text:
             if code in ('-', '.'):
                 self._outcode(code)
-            else:
-                time.sleep(self.delay_unit*2)
+            time.sleep(self.delay_unit)
 
     def _outcode(self, code):
         GPIO.output(self.outpin, GPIO.HIGH)
@@ -37,4 +36,3 @@ class OutputMorse:
             time.sleep(self.delay_unit*3)
 
         GPIO.output(self.outpin, GPIO.LOW)
-        time.sleep(self.delay_unit)
